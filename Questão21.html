@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+</head>
+
+<body>
+<h1>P�gina</h1>
+
+</body>
+
+<script>
+	
+	function pegaPalavra(frase){
+		
+		var vet = [];
+		var pos = 0;
+		var comeco = 0;
+		var fim = 0;
+
+		for(var i = 0; i < frase.length; i++){
+			if(frase[i] == " " || i == frase.length - 1){
+				fim = i;
+				if(i == frase.length - 1)
+					fim = i + 1;			
+				vet[pos] = '';	
+				for(var j = comeco; j < fim; j++){
+					vet[pos] += frase[j];				
+				} 		
+			
+			comeco = fim;
+			comeco++;
+			pos++;
+			}
+		}		
+		return vet;
+	}
+	
+	var result = pegaPalavra('Vai ter fjfj');
+
+	console.log(result);
+
+
+</script>
+
+
+</html>
+
